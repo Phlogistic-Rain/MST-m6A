@@ -9,13 +9,13 @@ class BERT(nn.Module):
         self.kmer = kmer
 
         if self.kmer == 3:
-            self.pretrainpath = './pretrain/DNAbert_3mer'
+            self.pretrainpath = './pretrained_weights/DNAbert_3mer'
         elif self.kmer == 4:
-            self.pretrainpath = './pretrain/DNAbert_4mer'
+            self.pretrainpath = './pretrained_weights/DNAbert_4mer'
         elif self.kmer == 5:
-            self.pretrainpath = './pretrain/DNAbert_5mer'
+            self.pretrainpath = './pretrained_weights/DNAbert_5mer'
         elif self.kmer == 6:
-            self.pretrainpath = './pretrain/DNAbert_6mer'
+            self.pretrainpath = './pretrained_weights/DNAbert_6mer'
 
         self.setting = BertConfig.from_pretrained(
             self.pretrainpath,

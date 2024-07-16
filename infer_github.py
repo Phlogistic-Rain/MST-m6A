@@ -77,7 +77,7 @@ if __name__ == '__main__':
 
         model = FusionDNAbert_1d_cov_2.FusionBERT(kmer1, kmer2)
 
-        dict_path = './model_0/' + cell_name + '.pth'
+        dict_path = './final_models/' + cell_name + '.pth'
         Util.load_state_dict(model, dict_path)
 
         model = model.to(device)
